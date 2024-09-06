@@ -37,5 +37,15 @@ async function search(query) {
     response.json()
   );
 
-  return data[keyword];
+  return keyword === "countries" ? listCities(data[keyword]) : data[keyword];
+}
+
+function listCities(countries) {
+  const cities = [];
+  countries.forEach((country) => {
+    country.cities.forEach((city) => {
+      cities.push(city);
+    });
+  });
+  return cities;
 }
