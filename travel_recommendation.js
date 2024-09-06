@@ -20,6 +20,10 @@ document.querySelector("form").addEventListener("submit", async (event) => {
   document.getElementById("cards").innerHTML = cards.join("");
 });
 
+document.querySelector("form").addEventListener("reset", () => {
+  document.getElementById("cards").innerHTML = "";
+});
+
 const keywords = {
   beach: "beaches",
   beaches: "beaches",
