@@ -62,3 +62,14 @@ html {
   -webkit-text-fill-color: transparent;
   transform: scale(2.2);
 } */
+
+#cards {
+  overflow: scroll;
+  height: 500px;
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+
+#cards::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
